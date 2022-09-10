@@ -1,0 +1,46 @@
+.card-wrapper {
+    margin: 1% 0;
+}
+
+.custom-circle-image {
+    width: 5vw;
+    height: 5vw;
+}
+
+.custom-circle-image-result {
+    width: 20vw;
+    height: 20vw;
+}
+
+.custom-circle-image img {
+    object-fit: cover;
+}
+
+.card-title {
+    letter-spacing: 0.5px;
+}
+
+.card-text {
+    font-family: MerriweatherRegular;
+    font-size: 22px;
+    line-height: initial;
+}
+
+.dropzone {
+    border-style: dashed;
+}
+
+.error {
+    font-size: 18px;
+    line-height: initial;
+    text-align: center;
+}
+
+.dz-remove {
+    color: red;
+    font-weight: bold;
+}
+
+#another-photo {
+    font-size: 20px;
+}

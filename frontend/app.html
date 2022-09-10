@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Foot Players Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand" href="#">Golden Foot Players Classifier</a>
+    </nav>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="row">
+                <div class="col-12 mx-auto">
+                    <form action="/file-upload" class="dropzone" id="dropzone">
+                        <div class="dz-message needsclick">
+                            <img src="./images/upload.png" width="50vw" height="50vw"><br>
+                            <span class="note needsclick">Drop files here or click to upload!</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3 mx-auto">
+                    <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="col-sm-8 error" id="error" >
+            <div class="alert alert-danger" role="alert">
+                The classifier failed to detect <strong>"face and the two eyes"</strong> properly! <br>
+            </div>
+            <div class="alert alert-warning" role="alert">
+                Please chose another photo
+            </div>
+        </div>
+
+        <div class="col-sm-4" id="resultHolder">
+        </div>
+        
+    </div>
+
+
+    <div class="container">
+        <!-- 1st players row! -->
+        <div class="row">
+            <div class="col card-wrapper" data-player="Alessandro_Del_Piero">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Alessandro_Del_Piero.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Alessandro Del Piero</h6>
+                    </div>
+                </div>
+            </div>            
+            <div class="col card-wrapper" data-player="Andreas_Iniesta">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/Andreas_Iniesta.jpg" alt="Card image cap">
+                        </div>
+                        <div class="text-center mt-2">
+                            <h6 class="text-uppercase card-title">Andreas Iniesta</h6>
+                            </p>
+                        </div>
+                    </div>
+            </div>            
+            <div class="col card-wrapper" data-player="Andriy_Shevchenko">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/Andriy_Shevchenko.jpg" alt="Card image cap">
+                        </div>
+                        <div class="text-center mt-2">
+                            <h6 class="text-uppercase card-title">Andriy Shevchenko</h6>
+                            </p>
+                        </div>
+                    </div>
+            </div>          
+
+            <div class="col card-wrapper" data-player="Cristiano_Ronaldo">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Cristiano_Ronaldo.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Cristiano Ronaldo</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>      
+
+            <div class="col card-wrapper" data-player="Didier_Drogba">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Didier_Drogba.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Didier Drogba</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col card-wrapper" data-player="Diego_Maradona">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Diego_Maradona.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Diego Maradona</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col card-wrapper" data-player="Edinson_Cavani">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Edinson_Cavani.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Edinson Cavani</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 2nd players row! -->
+        
+        <div class="row">
+            <div class="col card-wrapper" data-player="Francesco_Totti">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Francesco_Totti.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Francesco Totti</h6>
+                        </p>
+                    </div>
+                </div>
+        </div>           
+            <div class="col card-wrapper" data-player="Gianlugi_Buffon">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/Gianlugi_Buffon.jpg" alt="Card image cap">
+                        </div>
+                        <div class="text-center mt-2">
+                            <h6 class="text-uppercase card-title">Gianlugi Buffon</h6>
+                            </p>
+                        </div>
+                    </div>
+            </div>            
+            <div class="col card-wrapper" data-player="Iker_Casillas">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/Iker_Casillas.jpg" alt="Card image cap">
+                        </div>
+                        <div class="text-center mt-2">
+                            <h6 class="text-uppercase card-title">Iker Casillas</h6>
+                            </p>
+                        </div>
+                    </div>
+            </div>          
+
+            <div class="col card-wrapper" data-player="Lionel_Messi">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Lionel_Messi.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Lionel Messi</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>      
+
+            <div class="col card-wrapper" data-player="Luka_Modric">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Luka_Modric.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Luka Modric</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col card-wrapper" data-player="Mohamed_Salah">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Mohamed_Salah.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Mohamed Salah</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col card-wrapper" data-player="Pavel_Nedved">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Pavel_Nedved.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Pavel Nedved</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 3rd players row! -->
+
+        <div class="row">
+            <div class="col card-wrapper" data-player="Pele">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Pele.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Pele</h6>
+                    </div>
+                </div>
+            </div>            
+            <div class="col card-wrapper" data-player="Riyan_Giggs">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/Riyan_Giggs.jpg" alt="Card image cap">
+                        </div>
+                        <div class="text-center mt-2">
+                            <h6 class="text-uppercase card-title">Riyan Giggs</h6>
+                            </p>
+                        </div>
+                    </div>
+            </div>            
+            <div class="col card-wrapper" data-player="Roberto_Baggio">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/Roberto_Baggio.jpg" alt="Card image cap">
+                        </div>
+                        <div class="text-center mt-2">
+                            <h6 class="text-uppercase card-title">Roberto Baggio</h6>
+                            </p>
+                        </div>
+                    </div>
+            </div>          
+
+            <div class="col card-wrapper" data-player="Roberto_Carlos">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Roberto_Carlos.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Roberto Carlos</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>      
+
+            <div class="col card-wrapper" data-player="Ronaldinho">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Ronaldinho.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Ronaldinho</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col card-wrapper" data-player="Ronaldo_Nazario">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Ronaldo_Nazario.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Ronaldo Nazario</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col card-wrapper" data-player="Samuel_Eto">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Samuel_Eto.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Samuel Eto</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 4rd players row! -->
+        <div class="row">
+            <div class="col card-wrapper" data-player="Zlatan_Ibrahimovic">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Zlatan_Ibrahimovic.jpg" alt="Card image cap">
+                    </div>
+                    <div class="text-center mt-2">
+                        <h6 class="text-uppercase card-title">Zlatan Ibrahimovic</h6>
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+<script src="./app.js"></script>
+</html>
